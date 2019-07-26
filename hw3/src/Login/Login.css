@@ -1,0 +1,15 @@
+.wrap-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.login__form {
+    text-align: center;
+}
+
+.wrap__input {
+    margin: 15px 0;
+}
