@@ -1,0 +1,21 @@
+.modal-block {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 15px;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 500px;
+    height: 300px;
+
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid darkgrey;
+}
