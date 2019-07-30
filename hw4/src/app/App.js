@@ -5,6 +5,7 @@ import Header from './component/Header/Header';
 import Login from './component/Login/Login';
 import Blog from './component/Blog/Blog';
 import WelcomeMadal from './component/WelcomModal/WelcomeModal';
+import './App.css';
 
 class App extends React.Component {
   render() {
