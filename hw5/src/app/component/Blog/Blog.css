@@ -1,0 +1,10 @@
+.blog-wrap {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.blog__title {
+    width: 100%;
+    text-align: center;
+}
