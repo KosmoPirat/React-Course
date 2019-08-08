@@ -12,9 +12,9 @@ export default class User extends Component {
 
   render() {
     return (
-      <div>
+      <>
         {this.state.user && <UserProfile  {...this.state.user} />}
-      </div>
+      </>
     )
   }
 

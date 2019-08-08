@@ -1,11 +1,12 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { Provider } from 'react-redux';
 
 import routes from '../routes/routes';
 
 import Menu from '../components/Menu';
 import MenuItem from '../components/MenuItem';
+import store from '../stores/store'
 
 class Layout extends React.Component {
   constructor(props) {
@@ -18,7 +19,6 @@ class Layout extends React.Component {
   }
 
   render() {
-      console.log(this.props);
     return (
       <>
         <Menu brand={this.brand}>
@@ -36,7 +36,9 @@ class Layout extends React.Component {
           <div className="row">
             <div className="col-12">
                 <Switch>
+                    <Provider store={store}>
                     {routes.map((route, index) => <Route key={index} {...route}/>)}
+                    </Provider>
                 </Switch>
             </div>
           </div>
@@ -49,13 +51,4 @@ class Layout extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-    return {
-        users: state.users.users,
-        posts: state.posts.posts,
-        comments: state.comments.comments,
-
-    };
-}
-
-export default connect(mapStateToProps)(Layout);
+export default Layout;

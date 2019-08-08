@@ -29,10 +29,10 @@ export default class Users extends Component {
 
     render() {
         return (
-            <div>
+            <>
                 <NewUser/>
                 <UsersList users={this.state.users} />
-            </div>
+            </>
         )
     }
 }
