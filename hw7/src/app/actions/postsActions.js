@@ -13,6 +13,19 @@ export const fetchPosts = () => {
     };
 };
 
+export const fetchUserPosts = (userID) => {
+    return (dispatch) => {
+        dispatch({type: 'FETCH_USER_POSTS'});
+        axios.get(`http://jsonplaceholder.typicode.com/posts?userId=${userID}`)
+            .then(response => {
+                dispatch({type: 'FETCH_USER_POSTS_FULFILLED', payload: response.data});
+            })
+            .catch(error => {
+                dispatch({type: 'FETCH_USER_POSTS_REJECTED', payload: error});
+            });
+    };
+};
+
 export const addPost = (data) => {
     return {
         type: 'ADD_POST',

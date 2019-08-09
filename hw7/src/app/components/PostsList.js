@@ -13,7 +13,7 @@ export default class PostsList extends Component {
 
     return (
       <div>
-        <h1>Посты</h1>
+        <h4>Посты {this.props.userName}</h4>
         {posts}
       </div>
     )

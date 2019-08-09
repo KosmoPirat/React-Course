@@ -14,6 +14,19 @@ export default function reducer(state = {
         case 'FETCH_POSTS_REJECTED': {
             return {...state, fetching: false, error: action.payload}
         }
+
+
+        case 'FETCH_USER_POSTS': {
+            return {...state, fetching: true}
+        }
+        case 'FETCH_USER_POSTS_FULFILLED': {
+            return {...state, fetching: false, posts: action.payload}
+        }
+        case 'FETCH_USER_POSTS_REJECTED': {
+            return {...state, fetching: false, error: action.payload}
+        }
+
+
         case 'ADD_POST': {
             return {...state, posts: [...state.posts, action.payload]}
         }

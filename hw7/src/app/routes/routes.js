@@ -1,7 +1,6 @@
 import Main from '../pages/Main';
 import Users from '../pages/Users';
 import User from '../pages/User';
-import Posts from '../pages/Posts';
 import PageNotFound from '../pages/PageNotFound';
 
 export default [
@@ -18,11 +17,6 @@ export default [
     {
         path: '/users/:userId',
         component: User,
-        exact: true
-    },
-    {
-        path: '/posts',
-        component: Posts,
         exact: true
     },
     {

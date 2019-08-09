@@ -14,9 +14,24 @@ export default function reducer(state = {
         case 'FETCH_COMMENTS_REJECTED': {
             return {...state, fetching: false, error: action.payload}
         }
+
+
+        case 'FETCH_POST_COMMENTS': {
+            return {...state, fetching: true}
+        }
+        case 'FETCH_POST_COMMENTS_FULFILLED': {
+            return {...state, fetching: false, comments: action.payload}
+        }
+        case 'FETCH_POST_COMMENTS_REJECTED': {
+            return {...state, fetching: false, error: action.payload}
+        }
+
+
         case 'ADD_COMMENT': {
             return {...state, comments: [...state.comments, action.payload]}
         }
+
+
         case 'UPDATE_COMMENT': {
             const {id} = action.payload;
             const newComments = [...state.comments];
@@ -25,6 +40,8 @@ export default function reducer(state = {
 
             return {...state, comments: newComments}
         }
+
+
         case 'DELETE_COMMENTS': {
             return {
                 ...state,

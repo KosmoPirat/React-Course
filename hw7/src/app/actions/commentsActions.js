@@ -13,6 +13,19 @@ export const fetchComments = () => {
     };
 };
 
+export const fetchPostComments = (postID) => {
+    return (dispatch) => {
+        dispatch({type: 'FETCH_POST_COMMENTS'});
+        axios.get(`http://jsonplaceholder.typicode.com/comments?postId=${postID}`)
+            .then(response => {
+                dispatch({type: 'FETCH_POST_COMMENTS_FULFILLED', payload: response.data});
+            })
+            .catch(error => {
+                dispatch({type: 'FETCH_POST_COMMENTS_REJECTED', payload: error});
+            });
+    };
+};
+
 export const addComment = (data) => {
     return {
         type: 'ADD_COMMENT',

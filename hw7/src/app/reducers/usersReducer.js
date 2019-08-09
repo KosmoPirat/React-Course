@@ -14,6 +14,8 @@ export default function reducer(state = {
         case 'FETCH_USERS_REJECTED': {
             return {...state, fetching: false, error: action.payload}
         }
+
+
         case 'FETCH_USER': {
             return {...state, fetching: true}
         }
@@ -23,9 +25,13 @@ export default function reducer(state = {
         case 'FETCH_USER_REJECTED': {
             return {...state, fetching: false, error: action.payload}
         }
+
+
         case 'ADD_USER': {
             return {...state, users: [action.payload, ...state.users]}
         }
+
+
         case 'UPDATE_USER': {
             const {id} = action.payload;
             const newUsers = [...state.users];
@@ -34,6 +40,8 @@ export default function reducer(state = {
 
             return {...state, users: newUsers}
         }
+
+
         case 'DELETE_USER': {
             return {
                 ...state,
