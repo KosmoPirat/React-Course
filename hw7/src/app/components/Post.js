@@ -31,7 +31,7 @@ class Post extends Component {
             <div className="card border-secondary mb-3">
                 <h5 className="card-header">{this.props.title}</h5>
                 <div className="card-body text-secondary">
-                    <div>{this.props.body}</div>
+                    <div className="border-bottom pb-3">{this.props.body}</div>
                 </div>
                 {this.state.commentVisibility ? <CommentsList comments={this.props.comments} /> : null}
                 <button onClick={this.showHideComment} className="btn btn-dark">

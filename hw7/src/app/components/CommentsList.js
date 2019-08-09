@@ -14,7 +14,7 @@ export default class CommentsList extends Component {
         return (
             <div>
                 <h6 className="text-center">Комментарии к посту</h6>
-                <div className="overflow-auto ">{comments}</div>
+                <div className="overflow-auto" style={{height: "200px"}}>{comments}</div>
             </div>
         )
     }
