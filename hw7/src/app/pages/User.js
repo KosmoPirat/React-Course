@@ -13,7 +13,6 @@ class User extends Component {
     }
 
     render() {
-        console.log(this.props);
         return (
             <div className="d-flex">
                 <div className="user__wrap col-6">
